@@ -11,11 +11,12 @@ const passos = [
 
 export function RpgTool() {
   return (
-    <section id="rpg" aria-labelledby="t-rpg" className="relative overflow-hidden bg-areia-50 py-24 sm:py-32">
+    <section id="rpg" aria-labelledby="t-rpg" className="madeira relative overflow-hidden py-24 text-osso sm:py-32">
       <div className="mx-auto max-w-site px-5 sm:px-8">
-        <SectionHeading numero="09" eyebrow="O RPG como ferramenta" id="t-rpg" alinhamento="centro" titulo={<>E se aprender pudesse ser <em className="font-light">uma experiência?</em></>}>
+        <SectionHeading numero="09" eyebrow="O RPG como ferramenta" id="t-rpg" alinhamento="centro" tom="escuro" titulo={<>E se aprender fosse <em className="font-light text-ocre-300">uma experiência?</em></>}>
           <p>
-            O RPG transforma conceitos abstratos em decisões concretas. Ao interpretar um personagem, o participante precisa conversar, cooperar, escolher e lidar com as consequências narrativas de suas decisões.
+            <strong className="font-serif text-xl text-osso">Jogar. Escolher. Refletir.</strong><br />
+            O RPG transforma conceitos abstratos em decisões concretas. Ao interpretar um personagem, cada participante vive a história por dentro, conversa, coopera e percebe como as escolhas mudam o rumo da aventura.
           </p>
         </SectionHeading>
 
@@ -32,22 +33,22 @@ export function RpgTool() {
               transition={{ delay: i * 0.18, duration: 0.7 }}
               className="relative flex flex-col items-center text-center"
             >
-              <span className="relative z-10 flex h-28 w-28 items-center justify-center rounded-full border-2 border-terra/15 bg-osso shadow-papel">
-                <p.i className="h-12 w-12 text-terracota" />
-                <span className="absolute -right-1 -top-1 flex h-9 w-9 items-center justify-center rounded-full bg-terra font-serif text-sm font-semibold text-osso">{i + 1}</span>
+              <span className="relative z-10 flex h-32 w-32 items-center justify-center rounded-full border-2 border-ocre-300/60 bg-terra-900 shadow-[0_0_0_8px_rgba(247,241,230,.06)]">
+                <p.i className="h-14 w-14 text-ocre-300" />
+                <span className="absolute -right-1 -top-1 flex h-9 w-9 items-center justify-center rounded-full bg-terracota font-serif text-sm font-semibold text-osso">{i + 1}</span>
               </span>
-              <h3 className="mt-6 font-serif text-3xl font-semibold uppercase tracking-wide">{p.t}</h3>
-              <p className="mt-1 font-serif text-lg italic text-terracota-600">{p.d}</p>
-              <p className="mt-3 max-w-xs leading-relaxed text-terra-700">{p.ext}</p>
+              <h3 className="mt-6 font-serif text-4xl font-semibold uppercase tracking-wide text-osso">{p.t}</h3>
+              <p className="mt-1 font-serif text-lg italic text-ocre-300">{p.d}</p>
+              <p className="mt-3 max-w-xs leading-relaxed text-areia-200">{p.ext}</p>
             </motion.li>
           ))}
         </ol>
 
         <motion.figure initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: true }} className="mx-auto mt-20 max-w-2xl text-center">
-          <blockquote className="font-serif text-xl italic leading-snug text-terra-700">
+          <blockquote className="font-serif text-xl italic leading-snug text-areia-100">
             A educação como prática dialógica, que valoriza a experiência e a autonomia de quem aprende.
           </blockquote>
-          <figcaption className="mt-3 text-xs font-semibold uppercase tracking-[0.2em] text-terra-600">Inspirado em Paulo Freire, <cite className="not-italic">Pedagogia da autonomia</cite> (1996)</figcaption>
+          <figcaption className="mt-3 text-xs font-semibold uppercase tracking-[0.2em] text-ocre-300">Inspirado em Paulo Freire, <cite className="not-italic">Pedagogia da autonomia</cite> (1996)</figcaption>
         </motion.figure>
       </div>
     </section>

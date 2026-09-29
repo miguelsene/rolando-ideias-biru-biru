@@ -9,7 +9,7 @@ export function HowItWorks() {
   return (
     <section id="como-funciona" aria-labelledby="t-como" className="madeira relative overflow-hidden py-24 text-osso sm:py-32">
       <div className="relative mx-auto max-w-site px-5 sm:px-8">
-        <SectionHeading numero="08" eyebrow="Como funciona a experiência?" id="t-como" tom="escuro" titulo={<>35 minutos. Uma história. <em className="font-light text-ocre-300">Muitas perspectivas.</em></>}>
+        <SectionHeading numero="07" eyebrow="Como funciona a experiência?" id="t-como" tom="escuro" titulo={<>35 minutos. Uma história. <em className="font-light text-ocre-300">Muitas perspectivas.</em></>}>
           <p>Nunca jogou RPG? Não tem problema. As regras são aprendidas em poucos minutos, e os mestres conduzem cada passo da aventura.</p>
         </SectionHeading>
 

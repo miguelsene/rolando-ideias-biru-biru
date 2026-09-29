@@ -1,14 +1,13 @@
-export type Atributo = { nome: 'Coragem' | 'Diálogo' | 'Ofício'; valor: number }
+export type Atributo = { nome: 'Físico' | 'Velocidade' | 'Intelecto' | 'Coragem'; valor: number }
 
 export type Personagem = {
   id: string
   nome: string
-  idade: number
-  origem: string
-  ocupacao: string
-  sonho: string
-  dificuldade: string
-  laco: string
+  antecedentes: { nome: string; valor: number }[]
+  movimentos: number
+  acoesCombate: number
+  defesa: number
+  habilidade: string
   atributos: Atributo[]
   bemEstar: number
   cor: 'terracota' | 'oliva' | 'profundo' | 'ocre'
@@ -17,76 +16,46 @@ export type Personagem = {
 
 export const personagens: Personagem[] = [
   {
-    id: 'zefa',
-    nome: 'Dona Zefa',
-    idade: 52,
-    origem: 'Comunidade rural do sertão',
-    ocupacao: 'Costureira e cozinheira',
-    sonho: 'Abrir seu próprio ateliê e manter sua família por perto.',
-    dificuldade: 'Sente vergonha do próprio sotaque e evita falar em público.',
-    laco: 'Cuidou do jovem estudante da mesa quando ele era criança.',
+    id: 'maria-anunciada',
+    nome: 'Maria Anunciada',
+    antecedentes: [{ nome: 'Atenção', valor: 0 }, { nome: 'Roubo', valor: 0 }, { nome: 'Medicina', valor: 0 }, { nome: 'Suor', valor: 0 }, { nome: 'Montaria', valor: 0 }, { nome: 'Tradição', valor: 0 }, { nome: 'Negócios', valor: 1 }, { nome: 'Violência', valor: 1 }],
+    movimentos: 1, acoesCombate: 2, defesa: 5,
+    habilidade: 'Armas da natureza: prefere lutar com métodos “ultrapassados”. Ao usar armas rústicas, como facas de pedra, lanças de madeira ou machadinhas, o dano aumenta em 1 por ponto de Físico.\n\nFúria dos aflitos: em combate, reduz sua Defesa em 1 ponto e aumenta em 3 o dano dos ataques corpo a corpo.',
     atributos: [
-      { nome: 'Coragem', valor: 1 },
-      { nome: 'Diálogo', valor: 2 },
-      { nome: 'Ofício', valor: 3 },
+      { nome: 'Físico', valor: 3 }, { nome: 'Velocidade', valor: 0 },
+      { nome: 'Intelecto', valor: 0 }, { nome: 'Coragem', valor: 1 },
     ],
     bemEstar: 5,
     cor: 'terracota',
     simbolo: 'agulha',
   },
   {
-    id: 'caio',
-    nome: 'Caio',
-    idade: 17,
-    origem: 'Pequena cidade do sertão',
-    ocupacao: 'Estudante do ensino técnico',
-    sonho: 'Ser o primeiro da família a entrar em uma universidade.',
-    dificuldade: 'Ouve comentários sobre seu jeito de falar e tem evitado apresentar trabalhos.',
-    laco: 'Foi cuidado por Dona Zefa na infância e a considera da família.',
+    id: 'manoel-pereira',
+    nome: 'Manoel Pereira',
+    antecedentes: [{ nome: 'Atenção', valor: 0 }, { nome: 'Roubo', valor: 1 }, { nome: 'Medicina', valor: 0 }, { nome: 'Suor', valor: 2 }, { nome: 'Montaria', valor: 0 }, { nome: 'Tradição', valor: 0 }, { nome: 'Negócios', valor: 1 }, { nome: 'Violência', valor: 0 }],
+    movimentos: 3, acoesCombate: 3, defesa: 5,
+    habilidade: 'Livramento: uma vez por sessão, quando cair a 0 círculos de vida, recupera 2 e permanece de pé.\n\nPavio curto: improvisa armas com objetos à mão. Objetos pequenos e médios causam 3 de dano; objetos grandes causam 4, com -1 nos testes de Violência.',
     atributos: [
-      { nome: 'Coragem', valor: 2 },
-      { nome: 'Diálogo', valor: 1 },
-      { nome: 'Ofício', valor: 2 },
+      { nome: 'Físico', valor: 0 }, { nome: 'Velocidade', valor: 2 },
+      { nome: 'Intelecto', valor: 1 }, { nome: 'Coragem', valor: 2 },
     ],
     bemEstar: 5,
     cor: 'profundo',
     simbolo: 'livro',
   },
   {
-    id: 'lucia',
-    nome: 'Lúcia',
-    idade: 34,
-    origem: 'Capital do litoral nordestino',
-    ocupacao: 'Técnica de enfermagem',
-    sonho: 'Concluir a graduação em enfermagem e ter sua experiência reconhecida.',
-    dificuldade: 'Sua competência é questionada no trabalho por ela ser “de fora”.',
-    laco: 'Vizinha de Seu Antônio, divide com ele as caronas até o centro.',
+    id: 'tereza',
+    nome: 'Tereza',
+    antecedentes: [{ nome: 'Atenção', valor: 0 }, { nome: 'Roubo', valor: 0 }, { nome: 'Medicina', valor: 0 }, { nome: 'Suor', valor: 0 }, { nome: 'Montaria', valor: 0 }, { nome: 'Tradição', valor: 0 }, { nome: 'Negócios', valor: 0 }, { nome: 'Violência', valor: 0 }],
+    movimentos: 1, acoesCombate: 2, defesa: 0,
+    habilidade: '',
     atributos: [
-      { nome: 'Coragem', valor: 3 },
-      { nome: 'Diálogo', valor: 2 },
-      { nome: 'Ofício', valor: 2 },
+      { nome: 'Físico', valor: 2 }, { nome: 'Velocidade', valor: 0 },
+      { nome: 'Intelecto', valor: 1 }, { nome: 'Coragem', valor: 1 },
     ],
     bemEstar: 5,
     cor: 'oliva',
     simbolo: 'cruz',
-  },
-  {
-    id: 'antonio',
-    nome: 'Seu Antônio',
-    idade: 61,
-    origem: 'Vale do rio, no sertão',
-    ocupacao: 'Mestre de obras e violeiro',
-    sonho: 'Ver os netos crescerem com orgulho de onde a família veio.',
-    dificuldade: 'A saudade de casa e a solidão desde que chegou à cidade.',
-    laco: 'Ensina Lúcia a tocar viola nas noites de domingo.',
-    atributos: [
-      { nome: 'Coragem', valor: 2 },
-      { nome: 'Diálogo', valor: 3 },
-      { nome: 'Ofício', valor: 3 },
-    ],
-    bemEstar: 5,
-    cor: 'ocre',
-    simbolo: 'viola',
   },
 ]
 
@@ -166,18 +135,32 @@ export const combinados = [
 ]
 
 export const equipe = [
-  'Alyne Merces Reis',
-  'Gabriel da Hora Santos',
-  'Gabrielly Freire Borges',
+  'Lavinia Candida Sibuya Americo — RM 102732 — INF1BT',
+  'Isaac Robert Borges de Sousa — RM 94262 — INI3BM',
+  'João Vithor Veiga Silva — RM 93918 — INF3BM',
+  'Miguel Rodrigues de Sá Antunes Ferreira de Sene — RM 95370 — INF3FM',
+  'Maria Eduarda Rodrigues Santos — RM 95265 — INF3DM',
+  'Gabriel da Hora Santos — RM 95298 — INF3FM',
+  'Nathalia Watanabe Vasconcelos — RM 94333 — INF3CM',
+  'Gabrielly Freire Borges — RM 96727 — EEL3CM',
+  'Isabelle de Paula Santos — RM 95085 — INF3DM',
+  'Nicolle Holanda Cavalcante — RM 95076 — INF3DM',
+  'Caroline da Silva Santos — RM 94362 — INF3CM',
+  'Evellyn Ferreira da Silva — RM 90296 — INF3CM',
+  'Manuela Freitas da Silva Ferrari — RM 99219 — EDF2BT',
+  'Lian Ruby Flores Espinoza — RM 95465 — INF3FM',
+  'Manuella Caetano Bonifácio — RM 103833 — INF1FT',
+  'Rafael Souza Silva — RM 103706 — INF1CT',
+  'Alyne Merces Reis — RM 96867 — IRD3CM',
+  'Miguel de Matos Drumond Lage — RM 96465 — EEL3CM',
+  'Lucas Gomes da Silva — RM 96930 — INF3DM',
+  'Sara Gomes da Silva — RM 96737 — INF3DM',
+  'Felipe Enzo Souza Lopes — RM 96688 — EDF3BM',
+  'Maria Eduarda Rodrigues Barbosa — RM 104009 — EDF1BT',
+  'Eduardo Xavier Romualdo — RM 102781 — IRD1AT',
+  'Carlos Eduardo de Paiva Rodrigues — Professor orientador',
   'Giovana Guimarães Souza',
-  'Isabelle de Paula Santos',
   'Isabelli Carvalho Parron',
-  'João Vithor Veiga Silva',
-  'Lian Ruby Flores Espinoza',
-  'Manuela Freitas da Silva Ferrari',
-  'Maria Eduarda Rodrigues Barbosa',
-  'Miguel Rodrigues',
-  'Nicolle Holanda Cavalcante',
   'Victor Lucchi',
 ]
 

@@ -17,9 +17,11 @@ export function Team() {
         </SectionHeading>
 
         <ul className="mt-14 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
-          {equipe.map((nome, i) => (
+          {equipe.map((nomeCompleto, i) => {
+            const [nome, ...detalhes] = nomeCompleto.split(' — ')
+            return (
             <motion.li
-              key={nome}
+              key={nomeCompleto}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: '-30px' }}
@@ -29,9 +31,9 @@ export function Team() {
               <span className={`flex h-12 w-12 shrink-0 items-center justify-center rounded-lg font-serif text-base font-semibold text-osso transition-transform duration-500 group-hover:-rotate-6 ${fundos[i % fundos.length]}`} aria-hidden="true">
                 {iniciais(nome)}
               </span>
-              <span className="font-medium leading-snug">{nome}</span>
+              <span className="min-w-0"><span className="block font-medium leading-snug">{nome}</span><span className="mt-1 block text-xs text-terra-600">{detalhes.join(' · ')}</span></span>
             </motion.li>
-          ))}
+          )})}
         </ul>
       </div>
     </section>

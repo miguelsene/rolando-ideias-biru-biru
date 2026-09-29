@@ -16,7 +16,7 @@ export function SLA() {
           <div className="grid gap-12 lg:grid-cols-[1.4fr_1fr] lg:items-center">
             <div>
               <p className="eyebrow flex items-center gap-3 text-terracota-600">
-                <span className="inline-flex h-7 min-w-7 items-center justify-center rounded-full border border-current px-2 font-serif text-[0.8rem] tracking-normal">11</span>
+                <span className="inline-flex h-7 min-w-7 items-center justify-center rounded-full border border-current px-2 font-serif text-[0.8rem] tracking-normal">10</span>
                 Sobre a SLA 2026
               </p>
               <h2 id="t-sla" className="titulo mt-5 text-4xl text-balance sm:text-5xl">

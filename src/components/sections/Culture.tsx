@@ -10,7 +10,7 @@ export function Culture() {
     <section id="cultura" aria-labelledby="t-cultura" className="papel relative overflow-hidden py-24 sm:py-32">
       <div className="relative mx-auto max-w-site px-5 sm:px-8">
         <div className="grid gap-10 lg:grid-cols-2 lg:items-end">
-          <SectionHeading numero="07" eyebrow="Cultura e pertencimento" id="t-cultura" titulo={<>Uma história sobre pessoas, <em className="font-light">não estereótipos.</em></>} />
+          <SectionHeading numero="06" eyebrow="Cultura e pertencimento" id="t-cultura" titulo={<>Uma história sobre pessoas, <em className="font-light">não estereótipos.</em></>} />
           <motion.p initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.8, delay: 0.2 }} className="text-lg leading-relaxed text-terra-700">
             Cada personagem possui uma história própria, com sonhos, saberes, relações e projetos. O Nordeste não é apenas um cenário: é parte da identidade e da diversidade cultural brasileira.
           </motion.p>

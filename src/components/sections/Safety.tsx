@@ -20,7 +20,7 @@ export function Safety() {
             <Icon.escudo className="h-14 w-14 text-osso" />
           </motion.div>
           <p className="eyebrow mt-8 flex items-center gap-3 text-oliva-300">
-            <span className="inline-flex h-7 min-w-7 items-center justify-center rounded-full border border-current px-2 font-serif text-[0.8rem] tracking-normal">10</span>
+            <span className="inline-flex h-7 min-w-7 items-center justify-center rounded-full border border-current px-2 font-serif text-[0.8rem] tracking-normal">09</span>
             Segurança e respeito
           </p>
           <h2 id="t-seguranca" className="titulo mt-5 text-4xl text-balance sm:text-5xl lg:text-6xl">

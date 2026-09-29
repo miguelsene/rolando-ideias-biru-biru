@@ -23,7 +23,7 @@ export function Wellbeing() {
         {valor}
       </div>
       <div className="relative mx-auto max-w-site px-5 sm:px-8">
-        <SectionHeading numero="05" eyebrow="O marcador de bem-estar" id="t-bemestar" titulo={<>Suas escolhas <em className="font-light">deixam marcas.</em></>}>
+        <SectionHeading numero="05" eyebrow="O marcador de bem-estar" id="t-bemestar" titulo={<>Bem-estar <em className="font-light">durante a jornada.</em></>}>
           <p>
             O personagem possui um marcador de bem-estar de 0 a 5. Algumas situações podem reduzir esse marcador, enquanto atitudes de <strong className="text-terra">acolhimento, cooperação, escuta e acesso a direitos</strong> podem recuperá-lo.
           </p>

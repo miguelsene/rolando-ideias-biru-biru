@@ -5,7 +5,6 @@ import { Story } from './components/sections/Story'
 import { About } from './components/sections/About'
 import { Journey } from './components/sections/Journey'
 import { Characters } from './components/sections/Characters'
-import { Wellbeing } from './components/sections/Wellbeing'
 import { WhyTalk } from './components/sections/WhyTalk'
 import { Culture } from './components/sections/Culture'
 import { HowItWorks } from './components/sections/HowItWorks'
@@ -29,7 +28,6 @@ export default function App() {
         <About />
         <Journey />
         <Characters />
-        <Wellbeing />
         <WhyTalk />
         <Culture />
         <HowItWorks />
