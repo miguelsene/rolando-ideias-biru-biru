@@ -1,0 +1,77 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html { scroll-behavior: smooth; scroll-padding-top: 5rem; }
+  body {
+    @apply bg-areia-50 font-sans text-terra antialiased;
+    font-feature-settings: 'ss01';
+    text-rendering: optimizeLegibility;
+  }
+  ::selection { @apply bg-terracota text-osso; }
+  :focus-visible { outline: 3px solid #C98B2B; outline-offset: 3px; border-radius: 6px; }
+  h1, h2, h3 { font-variation-settings: 'SOFT' 50, 'WONK' 1; }
+}
+
+@layer components {
+  /* textura de papel (ruído) */
+  .papel {
+    background-color: #F2E8D6;
+    background-image:
+      url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='220' height='220'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 .35 0 0 0 0 .25 0 0 0 0 .15 0 0 0 .09 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E"),
+      radial-gradient(ellipse at 20% 10%, rgba(255,255,255,.55), transparent 60%),
+      radial-gradient(ellipse at 90% 100%, rgba(181,83,47,.08), transparent 55%);
+  }
+  .grao::after {
+    content: ''; position: absolute; inset: 0; pointer-events: none; mix-blend-mode: multiply; opacity: .5;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='220' height='220'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 .3 0 0 0 0 .2 0 0 0 0 .1 0 0 0 .14 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  }
+  /* grade de mapa */
+  .grade-mapa {
+    background-image:
+      linear-gradient(rgba(43,29,20,.07) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(43,29,20,.07) 1px, transparent 1px);
+    background-size: 48px 48px;
+  }
+  .grade-mapa-clara {
+    background-image:
+      linear-gradient(rgba(247,241,230,.06) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(247,241,230,.06) 1px, transparent 1px);
+    background-size: 56px 56px;
+  }
+  /* madeira escura */
+  .madeira {
+    background-color: #2B1D14;
+    background-image:
+      repeating-linear-gradient(92deg, rgba(0,0,0,.18) 0 2px, transparent 2px 9px, rgba(255,255,255,.025) 9px 11px, transparent 11px 23px),
+      radial-gradient(ellipse at 50% 0%, rgba(201,139,43,.14), transparent 60%);
+  }
+  /* borda de cordel sutil (padrão xilogravura) */
+  .borda-cordel {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='10'%3E%3Cpath d='M0 10 L6 2 L12 10 L18 2 L24 10' fill='none' stroke='%239A4323' stroke-width='1.4'/%3E%3C/svg%3E");
+    background-repeat: repeat-x; height: 10px;
+  }
+  .eyebrow { @apply font-sans text-xs font-semibold uppercase tracking-[0.28em]; }
+  .titulo { @apply font-serif font-semibold leading-[1.02] tracking-tight; }
+}
+
+@layer utilities {
+  .preserve-3d { transform-style: preserve-3d; }
+  .backface-hidden { backface-visibility: hidden; -webkit-backface-visibility: hidden; }
+  .rotate-y-180 { transform: rotateY(180deg); }
+  .perspective { perspective: 1400px; }
+  .text-balance { text-wrap: balance; }
+}
+
+@keyframes poeira {
+  0% { transform: translate3d(0,0,0); opacity: 0; }
+  15% { opacity: .7; }
+  100% { transform: translate3d(60px,-120px,0); opacity: 0; }
+}
+.particula { animation: poeira linear infinite; }
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .particula { animation: none; display: none; }
+}
