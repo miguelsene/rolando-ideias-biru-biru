@@ -12,7 +12,7 @@ export function Team() {
   return (
     <section id="equipe" aria-labelledby="t-equipe" className="bg-areia-50 py-24 sm:py-32">
       <div className="mx-auto max-w-site px-5 sm:px-8">
-        <SectionHeading numero="12" eyebrow="Nossa equipe" id="t-equipe" titulo={<>Quem está por trás <em className="font-light">da experiência?</em></>}>
+        <SectionHeading numero="13" eyebrow="Nossa equipe" id="t-equipe" titulo={<>Quem está por trás <em className="font-light">da experiência?</em></>}>
           <p>Estudantes de diferentes séries e cursos, reunidos em torno de uma mesma mesa.</p>
         </SectionHeading>
 

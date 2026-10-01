@@ -13,7 +13,7 @@ export function RpgTool() {
   return (
     <section id="rpg" aria-labelledby="t-rpg" className="madeira relative overflow-hidden py-24 text-osso sm:py-32">
       <div className="mx-auto max-w-site px-5 sm:px-8">
-        <SectionHeading numero="09" eyebrow="O RPG como ferramenta" id="t-rpg" alinhamento="centro" tom="escuro" titulo={<>E se aprender fosse <em className="font-light text-ocre-300">uma experiência?</em></>}>
+        <SectionHeading numero="10" eyebrow="O RPG como ferramenta" id="t-rpg" alinhamento="centro" tom="escuro" titulo={<>E se aprender fosse <em className="font-light text-ocre-300">uma experiência?</em></>}>
           <p>
             <strong className="font-serif text-xl text-osso">Jogar. Escolher. Refletir.</strong><br />
             O RPG transforma conceitos abstratos em decisões concretas. Ao interpretar um personagem, cada participante vive a história por dentro, conversa, coopera e percebe como as escolhas mudam o rumo da aventura.

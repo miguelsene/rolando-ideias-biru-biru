@@ -45,7 +45,7 @@ export function WhyTalk() {
   return (
     <section id="por-que" aria-labelledby="t-porque" className="grao relative overflow-hidden bg-terra-900 py-24 text-osso sm:py-32">
       <div className="relative mx-auto max-w-site px-5 sm:px-8">
-        <SectionHeading numero="05" eyebrow="Por que falar sobre isso?" id="t-porque" tom="escuro" titulo={<>Quando o preconceito deixa de ser <em className="font-light text-ocre-300">“apenas uma piada”.</em></>}>
+        <SectionHeading numero="06" eyebrow="Por que falar sobre isso?" id="t-porque" tom="escuro" titulo={<>Quando o preconceito deixa de ser <em className="font-light text-ocre-300">“apenas uma piada”.</em></>}>
           <p>
             A xenofobia regional se manifesta em piadas, imitações de sotaque, generalizações e barreiras de acesso a trabalho, moradia e convivência. Muitas vezes normalizados, esses comportamentos podem gerar sofrimento real.
           </p>
